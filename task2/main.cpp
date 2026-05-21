@@ -23,6 +23,9 @@ int main() {
             distributeQueue();
             break;
         }
+        else if (command == "EXIT"){
+            break;
+        }
     }
     return 0;
 }
