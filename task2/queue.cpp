@@ -34,6 +34,8 @@ void distributeQueue() {
         w.totalTime = 0;
         w.tickets.clear();
     }
+    sort(queueData.begin(), queueData.end(),[](const Visitor& a, const Visitor& b) {
+    return a.time > b.time;});
     for (auto &visitor : queueData) {
         int bestIndex = 0;
         for (int i = 1; i < windows.size(); i++) {
