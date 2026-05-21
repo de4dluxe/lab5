@@ -26,6 +26,9 @@ int main() {
         else if (command == "EXIT"){
             break;
         }
+        else {
+            cout << "Неизвестная команда" << endl;
+        }
     }
     return 0;
 }
