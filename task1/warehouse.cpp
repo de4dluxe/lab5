@@ -14,9 +14,7 @@ bool isValidAddress(const string& address)
     }
 
     char zone = address[0];
-
     bool zoneFound = false;
-
     for (const auto& z : zones)
     {
         if (z == zone)
@@ -24,7 +22,6 @@ bool isValidAddress(const string& address)
             zoneFound = true;
         }
     }
-
     if (!zoneFound)
     {
         return false;
@@ -33,7 +30,6 @@ bool isValidAddress(const string& address)
     int rack;
     int section;
     int shelf;
-
     try
     {
         rack = stoi(address.substr(1, 2));
@@ -85,7 +81,6 @@ vector<string> getAllAddresses()
             }
         }
     }
-
     return addresses;
 }
 
@@ -117,7 +112,6 @@ void addProduct(
             << " занята товаром "
             << cell.product
             << "\n";
-
         return;
     }
 
@@ -169,7 +163,6 @@ void removeProduct(
             << " не найден в ячейке "
             << address
             << "\n";
-
         return;
     }
 
