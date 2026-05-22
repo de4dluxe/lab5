@@ -24,6 +24,19 @@ void createTrain(const string& name, const vector<string>& towns){
         return;
     }
 
+    if(towns.size() == 1){
+        cout << "Поезд должен иметь минимум 2 остановки" << endl;
+        return;
+    }
+
+    for(int i = 1; i < towns.size(); i++){
+        if (towns[i-1] == towns[i]){
+            cout << "У поезда не может быть 2 одинаковые остановки" << endl;
+            return;
+        }
+    }
+
+
     trainToTowns[name] = towns;
 
     for(const auto& town : towns){
